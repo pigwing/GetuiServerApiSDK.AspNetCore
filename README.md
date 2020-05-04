@@ -13,7 +13,7 @@ GetuiConfiguration getuiConfiguration = new GetuiConfiguration()
 services.AddSingleton(getuiConfiguration);
 
 
-services.AddServiceApi();
+services.AddGetuiServiceApi();
 
 PushTemplateMessageService pushTemplateMessageService = services.GetRequiredService<PushTemplateMessageService>();
 PushResultMessage pushResultMessage;
