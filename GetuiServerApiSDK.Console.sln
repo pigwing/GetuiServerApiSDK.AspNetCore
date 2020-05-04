@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetuiServerApiSDK.Console", "GetuiServerApiSDK.Console\GetuiServerApiSDK.Console.csproj", "{9B41EAE3-A1C9-4AEE-BA9C-2E1FB85E72BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetuiServerApiSDK.AspNetCore", "GetuiServerApiSDK.AspNetCore\GetuiServerApiSDK.AspNetCore.csproj", "{EF5D2E90-29FE-4B73-9AFF-BFF6019B8838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B41EAE3-A1C9-4AEE-BA9C-2E1FB85E72BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B41EAE3-A1C9-4AEE-BA9C-2E1FB85E72BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B41EAE3-A1C9-4AEE-BA9C-2E1FB85E72BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B41EAE3-A1C9-4AEE-BA9C-2E1FB85E72BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5D2E90-29FE-4B73-9AFF-BFF6019B8838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5D2E90-29FE-4B73-9AFF-BFF6019B8838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5D2E90-29FE-4B73-9AFF-BFF6019B8838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5D2E90-29FE-4B73-9AFF-BFF6019B8838}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0195BB5A-ED01-463D-9114-3C2B832F4380}
+	EndGlobalSection
+EndGlobal
