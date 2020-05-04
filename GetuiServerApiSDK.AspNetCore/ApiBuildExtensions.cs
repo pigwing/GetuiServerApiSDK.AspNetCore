@@ -8,7 +8,7 @@ namespace GetuiServerApiSDK.AspNetCore
 {
     public static class ApiBuildExtensions
     {
-        public static IApplicationBuilder UseQuartz(this IApplicationBuilder applicationBuilder,
+        public static IApplicationBuilder UseGetuiServiceApi(this IApplicationBuilder applicationBuilder,
             IServiceProvider serviceProvider)
         {
             AuthTokenService authTokenService = serviceProvider.GetService<AuthTokenService>();

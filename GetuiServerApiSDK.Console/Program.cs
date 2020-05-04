@@ -33,7 +33,7 @@ namespace GetuiServerApiSDK.Console
                     services.AddSingleton(getuiConfiguration);
 
 
-                    services.AddServiceApi();
+                    services.AddGetuiServiceApi();
                 }).UseConsoleLifetime();
 
             var host = builder.Build();

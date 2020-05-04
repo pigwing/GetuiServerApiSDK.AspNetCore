@@ -16,7 +16,7 @@ namespace GetuiServerApiSDK.AspNetCore
             return services;
         }
 
-        public static IServiceCollection AddServiceApi(this IServiceCollection services)
+        public static IServiceCollection AddGetuiServiceApi(this IServiceCollection services)
         {
             AddServices(services);
             return services;
