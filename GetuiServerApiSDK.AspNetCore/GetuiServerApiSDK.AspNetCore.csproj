@@ -7,6 +7,9 @@
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
     <RepositoryUrl>https://github.com/pigwing/GetuiServerApiSDK.AspNetCore</RepositoryUrl>
+    <Version>2.0.0</Version>
+    <PackageProjectUrl>https://github.com/pigwing/GetuiServerApiSDK.AspNetCore</PackageProjectUrl>
+    <Authors>pigwing</Authors>
   </PropertyGroup>
 
   <ItemGroup>

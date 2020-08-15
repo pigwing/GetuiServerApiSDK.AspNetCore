@@ -58,7 +58,7 @@ namespace GetuiServerApiSDK.AspNetCore.Clients
 
             if (Tokens.TryGetValue(tokenKey, out AuthTokenResult getAuthTokenResult))
             {
-                if (DateTime.UtcNow < getAuthTokenResult.ExpireDateTime)
+                if (DateTime.UtcNow < getAuthTokenResult.Data.ExpireDateTime)
                 {
                     return getAuthTokenResult;
                 }
@@ -69,7 +69,7 @@ namespace GetuiServerApiSDK.AspNetCore.Clients
             try
             {
                 //utc timestamp
-                long timestamp = (DateTime.Now.ToUniversalTime().Ticks - Constants.UTC1970Tick) / 10000;
+                long timestamp = Utc.GetTimestamp();
 
                 AuthTokenModel authTokenModel = new AuthTokenModel()
                 {
@@ -79,7 +79,7 @@ namespace GetuiServerApiSDK.AspNetCore.Clients
                     AppKey = _getuiConfiguration.AppKey
                 };
                 string requestUri = string.Concat(_getuiConfiguration.ApiVersion, "/", _getuiConfiguration.AppId,
-                    "/auth_sign");
+                    "/auth");
                 HttpResponseMessage httpResponseMessage =
                     await _client.PostAsync(requestUri, new JsonContent(authTokenModel));
                 getAuthTokenResult = await httpResponseMessage.GetResultAsync<AuthTokenResult>();
@@ -103,9 +103,8 @@ namespace GetuiServerApiSDK.AspNetCore.Clients
 
             if (Tokens.TryGetValue(tokenKey, out AuthTokenResult authTokenResult))
             {
-                _client.SetAuthToken(authTokenResult.AuthToken);
-                string requestUri = string.Concat(_getuiConfiguration.ApiVersion, "/", _getuiConfiguration.AppId, "/auth_close");
-                HttpResponseMessage httpResponseMessage = await _client.PostAsync(requestUri, new StringContent(""));
+                string requestUri = string.Concat(_getuiConfiguration.ApiVersion, "/", _getuiConfiguration.AppId, "/auth/", authTokenResult.Data.AuthToken);
+                HttpResponseMessage httpResponseMessage = await _client.DeleteAsync(requestUri);
                 ResultMessage resultMessage = await httpResponseMessage.GetResultAsync<ResultMessage>();
 
                 _logger.LogInformation($"close auth token: {resultMessage}");
@@ -113,7 +112,7 @@ namespace GetuiServerApiSDK.AspNetCore.Clients
                 return resultMessage;
             }
 
-            return new ResultMessage { ClientHttpStatusCode = HttpStatusCode.OK, Desc = "auth token not found", Result = "fail"};
+            return new ResultMessage { ClientHttpStatusCode = HttpStatusCode.OK, Msg = "auth token not found", Code = 1};
 
         }
     }

@@ -11,7 +11,7 @@ namespace GetuiServerApiSDK.AspNetCore
         private static IServiceCollection AddServices(IServiceCollection services)
         {
             services.AddHttpClient<AuthTokenService>();
-            services.AddHttpClient<PushTemplateMessageService>();
+            services.AddHttpClient<PushCommonMessageService>();
 
             return services;
         }

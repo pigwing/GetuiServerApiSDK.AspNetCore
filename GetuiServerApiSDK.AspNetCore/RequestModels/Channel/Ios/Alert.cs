@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GetuiServerApiSDK.AspNetCore.RequestModels.Template
+namespace GetuiServerApiSDK.AspNetCore.RequestModels.Channel.Ios
 {
     public class Alert
     {

@@ -5,6 +5,6 @@
         public string AppId { get; set; }
         public string AppKey { get; set; }
         public string MasterSecret { get; set; }
-        public string ApiVersion { get; set; } = "v1";
+        public string ApiVersion { get; set; } = "v2";
     }
 }

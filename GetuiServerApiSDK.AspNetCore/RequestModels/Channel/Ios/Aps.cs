@@ -1,14 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Newtonsoft.Json;
 
-namespace GetuiServerApiSDK.AspNetCore.RequestModels.Template
+namespace GetuiServerApiSDK.AspNetCore.RequestModels.Channel.Ios
 {
     public class Aps
     {
         public Alert Alert { get; set; }
-        /// <summary>
-        /// 用于计算icon上显示的数字，还可以实现显示数字的自动增减，如“+1”、 “-1”、 “1” 等，计算结果将覆盖badge
-        /// </summary>
-        public string AutoBadge { get; set; }
         /// <summary>
         /// 通知铃声文件名，无声设置为“com.gexin.ios.silence”
         /// </summary>
